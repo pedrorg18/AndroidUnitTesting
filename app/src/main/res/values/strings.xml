@@ -7,6 +7,8 @@
 
     <string name="error_codes_prompt">Choose an error message</string>
     <string name="error_code">Error Code</string>
+    <string name="model_view_presenter">Model View Presenter</string>
+    <string name="mvp_default_message">Hi, unknown person</string>
 
     <string-array name="error_messages_array">
         <item> </item>
