@@ -8,6 +8,10 @@ import com.pedroroig.example.androidunittesting.R
 import kotlinx.android.synthetic.main.activity_error_codes.*
 
 
+/**
+ * The objective is to parse the error message from the strings inside the spinner.
+ * The one which does not contain number will return 0
+ */
 class ErrorCodesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,14 +24,14 @@ class ErrorCodesActivity : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val currentValue = parent!!.getItemAtPosition(position).toString()
                 if(currentValue.trim().isNotEmpty()) {
-                    calculateAndPrintErrorCode()
+                    calculateAndPrintErrorCode(currentValue)
                 }
             }
 
         }
     }
 
-    private fun calculateAndPrintErrorCode() {
+    private fun calculateAndPrintErrorCode(currentValue: String) {
         // TODO Calculate error code and set it to textView
         tvResult.text = "Calculate error code"
     }
