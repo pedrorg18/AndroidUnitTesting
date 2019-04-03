@@ -10,9 +10,9 @@
 
     <string-array name="error_messages_array">
         <item> </item>
-        <item>{"returnCode":104,"returnMessage":"Provided number is unknown.","lang":"en_US","context":{"scope":"somescope","id":"12345678"}}</item>
-        <item>{"returnCode":333,"returnMessage":"HELLO"}}</item>
-        <item>{"code": "SERVICE_UNAVAILABLE","url": "https://someserver.com/12345678","message": "Internal error"}a</item>
-        <item>{    "returnCode": 400}</item>
+        <item>{\"returnCode\":104,"returnMessage\":\"Provided number is unknown.\",\"lang\":\"en_US\",\"context\":{\"scope\":\"somescope\",\"id\":\"12345678\"}}</item>
+        <item>{\"returnCode\":333,\"returnMessage\":\"HELLO\"}}</item>
+        <item>{\"code\": \"SERVICE_UNAVAILABLE\",\"url\": \"https://someserver.com/12345678\",\"message\": \"Internal error\"}</item>
+        <item>{    \"returnCode\": 400}</item>
     </string-array>
 </resources>
