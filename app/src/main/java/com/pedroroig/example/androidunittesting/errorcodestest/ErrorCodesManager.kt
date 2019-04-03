@@ -8,7 +8,7 @@ package com.pedroroig.example.androidunittesting.errorcodestest
  */
 fun parseErrorCodeFromRawErrorBody(errorBody: String): Int {
     return try {
-        val withoutPrefix = errorBody.removePrefix("{returnCode:")
+        val withoutPrefix = errorBody.removePrefix("{\"returnCode\":")
         withoutPrefix.substring(0, withoutPrefix.indexOf(',')).toInt()
     } catch (e: Exception) {
         0
@@ -28,7 +28,7 @@ fun parseErrorCodeFromRawErrorBodyV2(errorBody: String): Int {
             // remove all whitespaces
             .replace("\\s".toRegex(), "")
             // Remove prefix
-            .removePrefix("{returnCode:")
+            .removePrefix("{\"returnCode\":")
         if(withoutPrefix.contains("returnMessage"))
             withoutPrefix.substring(0, withoutPrefix.indexOf(',')).toInt()
         else
