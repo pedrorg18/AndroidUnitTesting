@@ -1,13 +1,34 @@
 package com.pedroroig.example.androidunittesting.errorcodestest
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import android.view.View
+import android.widget.AdapterView
 import com.pedroroig.example.androidunittesting.R
+import kotlinx.android.synthetic.main.activity_error_codes.*
+
 
 class ErrorCodesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_error_codes)
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val currentValue = parent!!.getItemAtPosition(position).toString()
+                if(currentValue.trim().isNotEmpty()) {
+                    calculateAndPrintErrorCode()
+                }
+            }
+
+        }
+    }
+
+    private fun calculateAndPrintErrorCode() {
+        // TODO Calculate error code and set it to textView
+        tvResult.text = "Calculate error code"
     }
 }
