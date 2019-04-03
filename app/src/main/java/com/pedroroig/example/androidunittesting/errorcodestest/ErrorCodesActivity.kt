@@ -33,6 +33,6 @@ class ErrorCodesActivity : AppCompatActivity() {
 
     private fun calculateAndPrintErrorCode(currentValue: String) {
         // Calculate error code and set it to textView
-        tvResult.text = parseErrorCodeFromRawErrorBody(currentValue).toString()
+        tvResult.text = parseErrorCodeFromRawErrorBodyV2(currentValue).toString()
     }
 }
